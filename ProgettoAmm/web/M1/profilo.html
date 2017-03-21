@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Benvenuti su Nerdbook!</title>
+        <title>Profilo</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Marco Romoli">
+        <meta name="keywords" content="nerdbook profilo dati inserimento">
     </head>
     
     <body>
-        
-        <div>
+        <div id="header">
             
+            <div id="titolo">
+                Nerdbook
+            </div>
+            
+             <div id="sommario">
+                <nav>
+                    <ol>
+                        <li><a href="descrizione.html">Descrizione</a></li>
+                        <li><a href="bacheca.html">Bacheca</a></li>
+                    </ol>
+                </nav>
+             </div>
+            
+            <div id="divBody">
+                <h1>Creazione Profilo</h1>
+                <form action="#" method="post">
+                    <div>
+                        <label for="nomeutente">Nome</label>
+                        <input type="text" name="nomeutente" id="nomeutente"/>
+                    </div>
+                    <div>
+                        <label for="cognomeutente">Cognome</label>
+                        <input type="text" name="cognomeutente" id="cognomeutente"/>
+                    </div>
+                    <div>
+                        <label for="img">URL immagine profilo</label>
+                        <input type="url" name="img" id="img"/>
+                    </div>
+                    <div>
+                        <label for="presentazione">Frase Di Presentazione</label>
+                        <textarea name="presentazione" id="presentazione"></textarea>
+                    </div>
+                     <div>
+                        <label for="datanascita">Data di Nascita</label>
+                        <input type="date" name="datanascita" id="datanascita"/> 
+                    </div>
+                     <div>
+                        <label for="pswd">Password</label>
+                        <input type="password" name="pswd" id="pswd"/> 
+                    </div>
+                    <div>
+                        <label for="confermapsw"> Conferma Password</label>
+                        <input type="password" name="confermapsw" id="confermapsw"/> 
+                    </div>
+                    <button type="submit">Conferma</button>
+                </form>
+            </div>
         </div>
     </body>
 </html>
