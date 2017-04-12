@@ -773,6 +773,22 @@ nav li.active{
    nav a:link,nav a:visited{
     font-size: 20px;
     }
+    
+    a:link, a:visited{
+    font-size: 16px;
+    text-decoration: none;
+    color: #111111;
+   }
+}
+   @media only screen and (max-width: 408px){
+       
+    nav a:link,nav a:visited{
+    font-size: 20px;
+    }
+    
+    nav li{
+        padding: 2px;
+    }
 } 
 
 
