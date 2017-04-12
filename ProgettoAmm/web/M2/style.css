@@ -1,0 +1,510 @@
+ /**  Created on : 27-mar-2017, 15.10.52
+    Author     : Marco Romoli
+*/
+body{
+    background-color: #ebebeb;
+    font: 17px/16px "Lato","Open Sans", Arial, sans-serif;
+}
+
+h1{
+    font: 40px/45px "Lato","Open Sans", Arial, sans-serif;
+    color: #111111;
+    font-weight: bold;
+}
+
+h2{
+    font: 30px/35px "Lato","Open Sans", Arial, sans-serif;
+    color: #111111;
+    font-weight: bold;
+}
+
+h3{
+    font: 20px/25px "Lato","Open Sans", Arial, sans-serif;
+    color: #111111;
+    font-weight: bold;
+}
+
+a:link, a:visited{
+    font-size: 20px;
+    text-decoration: none;
+    color: #111111;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+label::after,label:not(.firstlabel)::before {
+        content: '\A';
+        white-space: pre;
+}
+
+/*inizio Blocco bacheca*/
+
+.divTitle{
+    font: 45px Comfortaa,"Lato","Open Sans", Arial, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+#divBody{
+    background-color: #ebebeb;
+    position: relative;
+    margin-top: 100px;
+    width: inherit;
+}
+#navbar{
+    display: inline-block;
+}
+
+nav ol,nav li{ 
+    list-style-type: none;
+    display: inline-block;   
+}
+
+nav li{
+    font: 25px "Lato","Open Sans", Arial, sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 35px;
+}
+
+
+
+nav a:link,nav a:visited{
+    font-size: 35px;
+    color: #ffffff;
+}
+
+nav li.active{
+    text-decoration: underline;
+    padding: 5px;
+}
+#utenteloggato{
+    font: 14px "Lato","Open Sans", Arial, sans-serif;
+    text-align: center;
+    margin-right: 12px;
+    float: right;
+    color: #ffffff;
+    height: 80px;
+    width: 200px;
+}
+#utenteloggato link{
+    color: #111111;
+    font: 20px "Lato","Open Sans", Arial, sans-serif;
+}
+
+#utenteloggato img{
+    margin: 5px;
+    width: 55px;
+    height: 55px;
+    border: solid #61C680 medium;
+    border-radius: 60px;
+}
+
+#header{
+    background-image: linear-gradient(#61C680 0%, #80D291 100%);;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+        
+    
+}
+
+#bacheca{
+        width: 70%;
+        position: relative; 
+        margin-left: 20%;
+        margin-right: 20%;
+        padding-bottom: 20px;
+        padding-left: 50px;
+}
+
+#sidebar{
+    
+    width: 15%;
+    border: solid #61C680 medium;
+    border-radius: 25px;
+    background: #ffffff;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);   
+    margin-left: 10px;
+}
+
+#sidebar li{
+   font: 20px "Open Sans", Arial, sans-serif;
+   list-style-type: none;
+   margin-top: 10px;
+   
+}
+
+#sidebar h2{
+    padding-left: 20px;;
+    font: 30px "Lato","Open Sans", Arial, sans-serif;
+    font-weight: 600;
+}
+
+#sidebar img{
+   display: inline-block;
+   width: 15px;
+   height: 15px;
+   padding-right: 3px;
+   padding-top: 3px;
+}
+
+.post{
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    border: solid #61C680 medium;
+    width: 70%;
+}
+
+.post img{
+    width: 100px;
+    height: 100px;
+    margin-top: 8px;
+    margin-left: 8px;
+    border: solid #61C680 medium;
+    border-radius: 60px;
+    margin-right: 5px;
+    
+}
+
+.post a{
+    font: 20px "Open Sans", Arial, sans-serif;
+    
+}
+
+.postUser{
+    padding-top: 5px;
+    font: 20px "Open Sans", Arial, sans-serif;
+    color: #111111;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+.postDescr{
+    font: 18px Arial, sans-serif;
+    color: #111111;
+    padding-bottom: 5px;
+    padding-top: 40px;
+    padding-left: 25px;
+    
+}
+
+.postDescrImg{
+   padding-bottom: 10px;
+   text-align: center;
+}
+
+.postDescrImg img{
+    height: 200px;
+    width: 350px;
+    border-radius: 15px;
+}
+/*Fine blocco bacheca*/
+
+/*Inizio blocco login*/
+
+#logBody{
+    text-align: center;
+    padding-top: 100px;
+}
+
+#login{
+    width: 60%;
+    max-width: 462px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid #61C680 thick;
+    border-radius: 20px;
+    padding: 5px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+#login label{
+    font: 20px/25px "Open Sans", Arial, sans-serif;
+}
+
+#login form{
+    margin: 20px;
+    display: inline-block;
+    text-align: left;
+}
+#login input{
+    width: 100%;
+    border: 0;
+    padding-left: 5px;
+    box-sizing: border-box;
+    border: solid #61C680 medium;
+    border-radius: 5px;
+}
+#login button{
+    width: 100%;
+    margin-top: 10px;
+}
+
+/**fine blocco login*/
+
+/**inizio blocco profilo*/
+
+#content{
+    text-align: center;
+}
+
+.formDati{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid #61C680 thick;
+    border-radius: 20px;
+    padding: 5px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+.formDati form{
+    display: inline-block;
+    text-align: left;
+}
+.formDati textArea{
+    border: solid #61C680 medium;
+    border-radius: 5px;
+    resize: none;
+}
+
+.formDati input{
+    width: 100%;
+    border: 0;
+    padding-left: 5px;
+    box-sizing: border-box;
+    border: solid #61C680 medium;
+    border-radius: 5px;
+}
+.formDati button{
+    width: 100%;
+    margin-top: 5px;
+}
+
+#imgprofilo img{
+    display: inline;
+    width: 40%;
+    height: auto;
+    padding: 5px;
+    border-radius: 10px;
+}
+/*Fine blocco profilo */
+
+/*Inizio blocco descrizione */
+
+#sommario .post{
+    border: solid #61C680 medium;
+    width: 400px;
+}
+
+#sommario .post li .sottoli{
+   list-style-type: none;
+}
+
+#description .post{
+    border: solid #61C680 medium;
+}
+
+#description .post h2,#description .post h3{
+    margin: 12px;
+}
+#description .post p{
+    margin: 12px;
+    padding-bottom: 4px;
+}
+
+
+@media only screen and (max-width: 1024px){
+   
+    
+    
+    .divTitle{
+    font: 30px Comfortaa,"Lato","Open Sans", Arial, sans-serif;
+    width: 100px;
+}
+ 
+    .post{
+        
+        margin-bottom: 5px;
+        padding: 10px;
+        width: 70%;
+        height: auto;
+        margin-left: 150px;
+        margin-right: auto;
+    }
+    
+     .post img{
+       height: 70px;
+       width: 70px;
+         
+     }
+    
+     .postUser{
+         
+         font: 20px "Open Sans", Arial, sans-serif;  
+         font-weight: bold;
+     }
+     
+    .postDescrImg{
+        width: 90%;
+        height: auto;
+        margin: auto;
+    }
+    
+    
+    .postDescrImg img{
+       width: 70%;
+       height: auto;
+    }
+    
+    nav li{
+        padding: 3px;
+    }
+
+    nav li:last-child{
+        padding-left: 2px;
+    }
+    
+    nav li:first-child{
+        padding-left: 10px;
+    }
+    
+
+    
+    nav a:link,nav a:visited{
+    font-size: 20px;
+    color: #ffffff;
+    }
+ /*   
+    #utenteloggato{
+    font: 11px "Lato","Open Sans", Arial, sans-serif;
+    height: 80px;
+    width: 105px;
+}
+
+#utenteloggato img{
+    width: 20px;
+    height: 20px;
+   }
+*/   
+   #bacheca{ 
+        margin-left: auto;
+        padding-bottom: 20px;
+        padding-left: 40px;
+       
+   }
+     
+     
+    #sidebar{
+         position: absolute;
+         min-width: 155px;
+     }
+     
+  a:link, a:visited{
+    font-size: 16px;
+    text-decoration: none;
+    color: #111111;
+   }
+   
+   a:hover{
+     font-weight: bold;  
+   }
+   
+   #description .post{
+     margin-left: 5px;
+   }
+   #sommario .post{
+       margin-left: 5px;
+       margin-right: 20px;
+       min-width: 229px;
+       max-width: 406px;
+       width: auto;
+   }
+  
+   
+   .formDati{
+    margin-left: 210px;   
+   }     
+}
+
+@media only screen and (max-width: 545px){
+   #utenteloggato{
+    font: 11px "Lato","Open Sans", Arial, sans-serif;
+    height: 80px;
+    width: 105px;
+    }
+
+    #utenteloggato img{
+    width: 20px;
+    height: 20px;
+    }
+}
+@media only screen and (max-width: 480px){
+
+    #header{
+        height: 110px;
+    } 
+    
+    #navbar{
+     display: block;
+     text-align: center;
+     margin-top: 10px;
+     left: 5px;
+    }
+    
+    #utenteloggato{
+        position: absolute;
+        top:2px;
+        right: 2px;
+    }
+    #bacheca{
+        position: relative;
+    }
+    #sidebar{
+        width: 90%;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    
+    #divBody{
+     margin-top: 140px;    
+    }
+    
+    .post{
+        margin-bottom: 5px;
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #description .post{
+       width: auto;
+   }
+   
+   .formDati{
+    margin-left: auto;
+    margin-right: 10px;
+    width: 90%;
+   } 
+}
+
+

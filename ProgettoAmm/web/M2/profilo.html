@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profilo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Marco Romoli">
+        <meta name="keywords" content="nerdbook profilo dati inserimento">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    </head>
+    
+    <body>
+        <div id="header">
+            
+            <div  class="divTitle" id="titolo">
+                Nerdbook
+            </div>
+            
+             <div id="navbar">
+                <nav>
+                    <ol>
+                        <li><a href="bacheca.html">Bacheca</a></li>
+                        <li class="active"><a href="profilo.html">Profilo</a></li>
+                    </ol>
+                </nav>
+             </div>
+                <div id="utenteloggato"> 
+                  <img alt="avatar" src="Assets/moku.jpg" align="left">
+                    <p>Marco Romoli</p>
+                    <p id="logout"><a href="Logut.html">Logout</a></p>
+                </div>
+        </div>   
+            <div id="divBody">  
+                <div id="sidebar">
+                <h2>Persone</h2>
+                    <ol class="sottsidebar">
+                        <li><img alt="avatar" src="Assets/avatar.png" align="left">Gianni</li>
+                        <li><img alt="avatar" src="Assets/avatar.png" align="left">Djanni</li>
+                        <li><img alt="avatar" src="Assets/avatar.png" align="left">Django</li>
+                    </ol>
+                <h2>Gruppi</h2>
+                    <ol class="sottsidebar">
+                        <li><img alt="avatar" src="Assets/avatar.png" align="left">Sport</li>
+                        <li><img alt="avatar" src="Assets/avatar.png" align="left">Velisti</li>
+                        <li><img alt="avatar" src="Assets/avatar.png" align="left">Pirati</li>
+                    </ol>
+            </div>
+              <div id="content">
+                <div class="formDati">
+                <div id="imgprofilo">
+                <img alt="avatar" src="Assets/profilopic.jpg" align="left">
+                </div>
+                <form action="#" method="post">
+                    <div>
+                        <label class="firstlabel" for="nomeutente">Nome</label>
+                        <input type="text" name="nomeutente" id="nomeutente"/>
+                    </div>
+                    <div>
+                        <label for="cognomeutente">Cognome</label>
+                        <input type="text" name="cognomeutente" id="cognomeutente"/>
+                    </div>
+                    <div>
+                        <label for="img">URL immagine profilo</label>
+                        <input type="url" name="img" id="img"/>
+                    </div>
+                    <div>
+                        <label for="presentazione">Frase Di Presentazione</label>
+                        <textarea name="presentazione" id="presentazione"></textarea>
+                    </div>
+                    <div>
+                        <label for="datanascita">Data di Nascita</label>
+                        <input type="date" name="datanascita" id="datanascita"/>
+                    </div>
+                    <div>
+                        <label for="pswd">Password</label>
+                        <input type="password" name="pswd" id="pswd"/>
+                    </div> 
+                    <div>
+                        <label for="confermapsw"> Conferma Password</label>
+                        <input type="password" name="confermapsw" id="confermapsw"/>
+                    </div>
+                        <button type="submit">Conferma</button>
+                </form>
+            </div>
+              </div>
+          </div>
+           
+    </body>
+</html>
