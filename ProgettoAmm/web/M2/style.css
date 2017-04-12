@@ -296,6 +296,7 @@ nav li.active{
     border: solid #61C680 medium;
     border-radius: 5px;
     resize: none;
+    width: 94%;
 }
 
 .formDati input{
