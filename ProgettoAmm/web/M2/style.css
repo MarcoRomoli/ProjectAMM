@@ -691,7 +691,7 @@ nav li.active{
    }     
 }
 
-@media only screen and (max-width: 545px){
+@media only screen and (max-width: 547px){
     #utenteloggato{
     font: 11px "Lato","Open Sans", Arial, sans-serif;
     height: 80px;
