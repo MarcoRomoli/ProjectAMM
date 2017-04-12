@@ -707,7 +707,12 @@ nav li.active{
 
     #header{
         height: 110px;
-    } 
+    }
+  
+   .divTitle{
+    font: 30px Comfortaa,"Lato","Open Sans", Arial, sans-serif;
+    width: 100px;
+   }
     
     #navbar{
      display: block;
