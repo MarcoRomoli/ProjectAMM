@@ -586,7 +586,7 @@ nav li.active{
 
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px) and (min-width: 480px){
    
     
     
@@ -647,19 +647,10 @@ nav li.active{
     font-size: 20px;
     color: #ffffff;
     }
- /*   
-    #utenteloggato{
-    font: 11px "Lato","Open Sans", Arial, sans-serif;
-    height: 80px;
-    width: 105px;
-}
-
-#utenteloggato img{
-    width: 20px;
-    height: 20px;
-   }
-*/   
-   #bacheca{ 
+    
+    
+    
+    #bacheca{ 
         margin-left: auto;
         padding-bottom: 20px;
         padding-left: 40px;
@@ -700,7 +691,7 @@ nav li.active{
 }
 
 @media only screen and (max-width: 545px){
-   #utenteloggato{
+    #utenteloggato{
     font: 11px "Lato","Open Sans", Arial, sans-serif;
     height: 80px;
     width: 105px;
@@ -710,7 +701,8 @@ nav li.active{
     width: 20px;
     height: 20px;
     }
-}
+   }
+
 @media only screen and (max-width: 480px){
 
     #header{
@@ -720,8 +712,8 @@ nav li.active{
     #navbar{
      display: block;
      text-align: center;
-     margin-top: 10px;
      left: 5px;
+     
     }
     
     #utenteloggato{
@@ -739,16 +731,29 @@ nav li.active{
     }
     
     #divBody{
-     margin-top: 140px;    
+     margin-top: 140px;  
+     
     }
     
     .post{
+        display: block;
         margin-bottom: 5px;
         width: 100%;
         height: auto;
         margin-left: auto;
         margin-right: auto;
     }
+    
+    #bacheca{ 
+        margin-left: auto;
+        padding-bottom: 20px;
+        padding-left: 40px;
+       
+   }
+   .postDescrImg img{
+       width: 70%;
+       height: auto;
+    }   
     
     #description .post{
        width: auto;
@@ -759,6 +764,10 @@ nav li.active{
     margin-right: 10px;
     width: 90%;
    } 
+   
+   nav a:link,nav a:visited{
+    font-size: 20px;
+    }
 } 
 
 
