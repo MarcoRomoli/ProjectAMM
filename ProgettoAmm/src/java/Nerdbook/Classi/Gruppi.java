@@ -15,6 +15,7 @@ public class Gruppi {
     
     private int id;
     private String nome;
+    private String imgGruppo;
     private ArrayList<Utente> listaUtenti = new ArrayList<Utente>(); 
 
     
@@ -59,6 +60,20 @@ public class Gruppi {
      */
     public void setListaUtenti(ArrayList<Utente> listaUtenti) {
         this.listaUtenti = listaUtenti;
+    }
+
+    /**
+     * @return the imgGruppo
+     */
+    public String getImgGruppo() {
+        return imgGruppo;
+    }
+
+    /**
+     * @param imgGruppo the imgGruppo to set
+     */
+    public void setImgGruppo(String imgGruppo) {
+        this.imgGruppo = imgGruppo;
     }
 
 }

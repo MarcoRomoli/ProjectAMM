@@ -8,6 +8,8 @@ package Nerdbook.Classi;
 
 import Nerdbook.Classi.UtenteFactory;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +21,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author moku
  */
-@WebServlet(urlPatterns = {"/M2/login.html"})
+@WebServlet(urlPatterns = {"/login.html"}, loadOnStartup = 0)
 public class Login extends HttpServlet {
 
     /**
@@ -33,6 +35,22 @@ public class Login extends HttpServlet {
      */  
     
 
+    private static final String JDBC_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
+    private static final String DB_CLEAN_PATH = "../../web/WEB-INF/db/ammdb";
+    private static final String DB_BUILD_PATH = "WEB-INF/db/ammdb";
+    
+    @Override
+            public void init(){
+            String dbConnection = "jdbc:derby:" + this.getServletContext().getRealPath("/") + DB_BUILD_PATH;
+            try {
+                Class.forName(JDBC_DRIVER);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            UtenteFactory.getInstance().setConnectionString(dbConnection);
+            GruppiFactory.getInstance().setConnectionString(dbConnection);
+            PostFactory.getInstance().setConnectionString(dbConnection);
+            }
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -68,6 +86,8 @@ public class Login extends HttpServlet {
                 //se l'utente è valido...
                 if (loggedUserID != -1){
                     session.setAttribute("loggedIn", true);
+                    getServletContext().setAttribute("utenti",UtenteFactory.getInstance().getListaUtenti());
+                    getServletContext().setAttribute("gruppi",GruppiFactory.getInstance().getListaGruppi());
                     session.setAttribute("loggedUserID", loggedUserID);
                     session.setAttribute("CurrentUser", UtenteFactory.getInstance().getUtenteById(loggedUserID));
                     
@@ -79,9 +99,11 @@ public class Login extends HttpServlet {
                      request.getRequestDispatcher("profilo.jsp").forward(request, response);
                     }
                     else{
-                        request.getRequestDispatcher("bacheca.jsp").forward(request, response);
+                        request.getRequestDispatcher("bacheca.html").forward(request, response);
                     }
-                       
+                     
+                    
+                    
                     return;
       
                 } else { //altrimenti se la coppia user/pass non è valida (id==-1)
@@ -95,6 +117,8 @@ public class Login extends HttpServlet {
             }
         }
 
+        
+   
         /*
           Se non si verifica nessuno degli altri casi, 
           tentativo di accesso diretto alla servlet Login -> reindirizzo verso 

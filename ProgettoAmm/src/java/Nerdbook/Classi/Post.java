@@ -16,7 +16,9 @@ public class Post {
     };
 
     protected int id;
+    private int gruppoid;
     protected Utente user;
+    private Utente autore;
     private String content;
     private String allegato;
     private Type postType;
@@ -25,6 +27,9 @@ public class Post {
         
         id = 0;
         user = null;
+        gruppoid=-1;
+        autore=null;
+        allegato="";
         content = "";
         postType = Type.TEXT;
     }
@@ -83,5 +88,48 @@ public class Post {
      */
     public void setPostType(Type postType) {
         this.postType = postType;
+    }
+
+    /**
+     * @return the allegato
+     */
+    public String getAllegato() {
+        return allegato;
+    }
+
+    /**
+     * @param allegato the allegato to set
+     */
+    public void setAllegato(String allegato) {
+        this.allegato = allegato;
+    }
+
+
+    /**
+     * @param autore the autore to set
+     */
+    public void setAutore(Utente autore) {
+        this.autore = autore;
+    }
+
+    /**
+     * @return the autore
+     */
+    public Utente getAutore() {
+        return autore;
+    }
+
+    /**
+     * @return the gruppoid
+     */
+    public int getGruppoid() {
+        return gruppoid;
+    }
+
+    /**
+     * @param gruppoid the gruppoid to set
+     */
+    public void setGruppoid(int gruppoid) {
+        this.gruppoid = gruppoid;
     }
 }

@@ -26,7 +26,7 @@
               <div id="content">
                 <div class="formDati">
                 <div id="imgprofilo">
-                <img alt="avatar" src="Assets/profilopic.jpg">
+                <img alt="avatar" src="${CurrentUser.urlFoto}">
                 </div>
                 <form action="profilo.html" method="post">
                     <div>
@@ -44,7 +44,7 @@
                     </div>
                     <div>
                         <label for="presentazione">Frase Di Presentazione</label>
-                        <textarea name="presentazione" id="presentazione" <c:if test="${validazione =='1'}"> value="${frasepresntazione}"</c:if>></textarea>
+                        <textarea name="presentazione" id="presentazione" <c:if test="${validazione =='1'}"> value="${presentazione}"</c:if>></textarea>
                     </div>
                     <div>
                         <label for="datanascita">Data di Nascita</label>

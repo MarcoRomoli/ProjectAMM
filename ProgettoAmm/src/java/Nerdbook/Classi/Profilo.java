@@ -43,13 +43,8 @@ public class Profilo extends HttpServlet {
             return;
         }
     
-
-    //se l'utente è loggato
-          if (session.getAttribute("loggedIn") != null) {
-            request.getRequestDispatcher("profilo.jsp").forward(request, response);
-            return;
-        }
-         if (request.getParameter("conferma").equals("true")){
+        
+         if (request.getParameter("conferma")!=null&&request.getParameter("conferma").equals("true")){
              
             String nome = request.getParameter("nome");
             String cognome = request.getParameter("cognome"); 
@@ -60,14 +55,14 @@ public class Profilo extends HttpServlet {
             String confermapsw = request.getParameter("confermapsw");
             if(!psw.equals(confermapsw) && psw!=null && confermapsw!=null){request.setAttribute("errore",true);}
             else{
-                request.setAttribute("validazione","true");
-                request.setAttribute("nome","nome");
-                request.setAttribute("cognome","cognome");
-                request.setAttribute("img","img");
-                request.setAttribute("presentazione","presentazione");
-                request.setAttribute("datanascita","datanascita");
-                request.setAttribute("psw","psw");
-                request.setAttribute("confermapsw","confermapsw");
+                request.setAttribute("validazione","1");
+                request.setAttribute("nome",nome);
+                request.setAttribute("cognome",cognome);
+                request.setAttribute("img",img);
+                request.setAttribute("presentazione",presentazione);
+                request.setAttribute("datanascita",datanascita);
+                request.setAttribute("psw",psw);
+                request.setAttribute("confermapsw",confermapsw);
             }      
             
          }   

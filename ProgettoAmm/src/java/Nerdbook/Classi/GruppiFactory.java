@@ -14,7 +14,8 @@ import java.util.ArrayList;
 public class GruppiFactory {
     
     private static GruppiFactory singleton;
-
+    private String connectionString;
+    
     public static GruppiFactory getInstance() {
         if (singleton == null) {
             singleton = new GruppiFactory();
@@ -33,6 +34,7 @@ public class GruppiFactory {
         listaUtenti.add(utenteFactory.getUtenteById(1));
         gruppi1.setId(0);
         gruppi1.setNome("Mongolfieristi");
+        gruppi1.setImgGruppo("Assets/mongolfiera.jpg");
         gruppi1.setListaUtenti(listaUtenti);
         
         Gruppi gruppi2 = new Gruppi();
@@ -40,6 +42,7 @@ public class GruppiFactory {
         listaUtenti.add(utenteFactory.getUtenteById(3));
         gruppi2.setId(1);
         gruppi2.setNome("Ritardatari");
+        gruppi2.setImgGruppo("Assets/clock.png");
         gruppi2.setListaUtenti(listaUtenti);
         
         listaGruppi.add(gruppi1);
@@ -54,4 +57,16 @@ public class GruppiFactory {
         }
         return null;
     }
+    
+    public ArrayList<Gruppi> getListaGruppi(){
+        return listaGruppi;
+    }
+    
+       public void setConnectionString(String s){
+	this.connectionString = s;
+       }
+       
+       public String getConnectionString(){
+	return this.connectionString;
+       }
 }

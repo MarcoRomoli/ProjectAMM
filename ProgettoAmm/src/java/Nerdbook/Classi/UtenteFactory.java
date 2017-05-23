@@ -15,6 +15,7 @@ public class UtenteFactory {
     
        //Pattern Design Singleton
     private static UtenteFactory singleton;
+    private String connectionString;
 
     public static UtenteFactory getInstance() {
         if (singleton == null) {
@@ -44,22 +45,22 @@ public class UtenteFactory {
         utente2.setId(1);
         utente2.setNome("Fat");
         utente2.setCognome("Cat");
-        utente2.setEmail("");
+        utente2.setEmail("fatcat@gmail.com");
         utente2.setPassword("123");
         utente2.setFrasepresentazione("Sono affamato");
         utente2.setData("11/06/2000");
-        utente2.setUrlFoto("");
+        utente2.setUrlFoto("Assets/gatto1.jpg");
         
         //Maestro Muten
         Utente utente3 = new Utente();
         utente3.setId(2);
         utente3.setNome("Maestro");
         utente3.setCognome("Muten");
-        utente3.setEmail("");
+        utente3.setEmail("maestro@gmail.com");
         utente3.setPassword("123");
         utente3.setFrasepresentazione("Dove sono le ragazze?");        
         utente3.setData("01/01/1930");
-        utente3.setUrlFoto("");
+        utente3.setUrlFoto("Assets/genio1.jpg");
         
 
         listaUtenti.add(utente1);
@@ -84,5 +85,17 @@ public class UtenteFactory {
         }
         return -1;
     }
+    
+    public ArrayList<Utente> getListaUtenti(){
+           return listaUtenti;
+    }
+    
+       public void setConnectionString(String s){
+	this.connectionString = s;
+       }
+       
+       public String getConnectionString(){
+	return this.connectionString;
+       }
     
 }

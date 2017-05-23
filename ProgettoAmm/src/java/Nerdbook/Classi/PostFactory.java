@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class PostFactory {
     //Pattern Design Singleton
     private static PostFactory singleton;
+    private String connectionString;
 
     public static PostFactory getInstance() {
         if (singleton == null) {
@@ -31,20 +32,25 @@ public class PostFactory {
         //Creazione Post
         Post post1 = new Post();
         post1.setContent("CHe fame!");
+        post1.setAutore(utenteFactory.getUtenteById(0));
         post1.setId(0);
         post1.setUser(utenteFactory.getUtenteById(0));
 
         Post post2 = new Post();
-        post2.setContent("img/download.jpg");
+        post2.setContent("il mio padrone che ci nutre!");
+        post2.setAutore(utenteFactory.getUtenteById(1));
         post2.setId(1);
-        post2.setUser(utenteFactory.getUtenteById(0));
+        post2.setUser(utenteFactory.getUtenteById(1));
         post2.setPostType(Post.Type.IMAGE);
+        post2.setAllegato("Assets/download.jpg");
 
         Post post3 = new Post();
         post3.setContent("Io e il mio amico in vacanza!");
         post3.setId(2);
-        post3.setUser(utenteFactory.getUtenteById(0));
-        post3.setPostType(Post.Type.TEXT);
+        post3.setAutore(utenteFactory.getUtenteById(2));
+        post3.setUser(utenteFactory.getUtenteById(2));
+        post3.setPostType(Post.Type.LINK);
+        post3.setAllegato("Assets/muten.png");
 
         listaPost.add(post1);
         listaPost.add(post2);
@@ -60,9 +66,9 @@ public class PostFactory {
         return null;
     }
 
-    public List getPostList(Utente utn) {
+    public ArrayList<Post> getPostList(Utente utn) {
 
-        List<Post> listaPost = new ArrayList<Post>();
+        ArrayList<Post> listaPost = new ArrayList<Post>();
 
         for (Post post : this.listaPost) {
             if (post.getUser().equals(utn)) {
@@ -71,4 +77,23 @@ public class PostFactory {
         }
         return listaPost;
     }
+       public ArrayList<Post> getPostList(Gruppi grp) {
+
+        ArrayList<Post> listaPost = new ArrayList<Post>();
+        
+        for (Post post : this.listaPost) { 
+            if (post.getGruppoid()== grp.getId()) {
+                listaPost.add(post);
+            }
+        }
+        return listaPost;
+    }
+       
+       public void setConnectionString(String s){
+	this.connectionString = s;
+       }
+       
+       public String getConnectionString(){
+	return this.connectionString;
+       }
 }
