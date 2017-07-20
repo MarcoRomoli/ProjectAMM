@@ -1,7 +1,7 @@
-Tue May 23 11:53:10 CEST 2017 : Server di rete Apache Derby: 10.11.1.2 - (1629631) avviato e pronto ad accettare connessioni sulla porta 1527
+Mon Jul 17 15:03:19 CEST 2017 : Server di rete Apache Derby: 10.11.1.2 - (1629631) avviato e pronto ad accettare connessioni sulla porta 1527
 ----------------------------------------------------------------
-Tue May 23 11:53:11 CEST 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza a816c00e-015c-34b9-7d9b-0000476baa4c
+Mon Jul 17 15:03:19 CEST 2017:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza a816c00e-015d-50a5-560e-0000476baa4c
 sulla directory di database /home/moku/NetBeansProjects/ProjectAMM/ProgettoAmm/web/WEB-INF/db/ammdb con caricatore classi sun.misc.Launcher$AppClassLoader@6f94fa3e 
 Caricato da file:/usr/lib/jvm/java-8-oracle/db/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -9,16 +9,16 @@ java.runtime.version=1.8.0_121-b13
 user.dir=/usr/lib/jvm/java-8-oracle/db
 os.name=Linux
 os.arch=amd64
-os.version=4.4.0-75-generic
+os.version=4.4.0-79-generic
 derby.system.home=/home/moku/NetBeansProjects/ProjectAMM/ProgettoAmm/web/WEB-INF/db
 Programma di caricamento classe database avviato - derby.database.classpath=''
 ----------------------------------------------------------------
-Tue May 23 11:53:26 CEST 2017:
-Arresto dell'istanza a816c00e-015c-34b9-7d9b-0000476baa4c nella directory del database /home/moku/NetBeansProjects/ProjectAMM/ProgettoAmm/web/WEB-INF/db/ammdb con il caricatore di classi sun.misc.Launcher$AppClassLoader@6f94fa3e 
-Tue May 23 11:53:26 CEST 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = ammdb), (DRDAID = {2}), Chiusura del database 'ammdb'.
+Mon Jul 17 15:56:13 CEST 2017:
+Arresto dell'istanza a816c00e-015d-50a5-560e-0000476baa4c nella directory del database /home/moku/NetBeansProjects/ProjectAMM/ProgettoAmm/web/WEB-INF/db/ammdb con il caricatore di classi sun.misc.Launcher$AppClassLoader@6f94fa3e 
+Mon Jul 17 15:56:13 CEST 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = ammdb), (DRDAID = {2}), Chiusura del database 'ammdb'.
 ----------------------------------------------------------------
-Tue May 23 11:53:56 CEST 2017:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza a65c80ac-015c-34b9-7d9b-0000476baa4c
+Mon Jul 17 15:58:18 CEST 2017:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza f04340b7-015d-50a5-560e-0000476baa4c
 sulla directory di database /home/moku/NetBeansProjects/ProjectAMM/ProgettoAmm/web/WEB-INF/db/ammdb con caricatore classi sun.misc.Launcher$AppClassLoader@6f94fa3e 
 Caricato da file:/usr/lib/jvm/java-8-oracle/db/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -26,6 +26,25 @@ java.runtime.version=1.8.0_121-b13
 user.dir=/usr/lib/jvm/java-8-oracle/db
 os.name=Linux
 os.arch=amd64
-os.version=4.4.0-75-generic
+os.version=4.4.0-79-generic
 derby.system.home=/home/moku/NetBeansProjects/ProjectAMM/ProgettoAmm/web/WEB-INF/db
 Programma di caricamento classe database avviato - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Jul 17 15:58:32 CEST 2017:
+Arresto dell'istanza f04340b7-015d-50a5-560e-0000476baa4c nella directory del database /home/moku/NetBeansProjects/ProjectAMM/ProgettoAmm/web/WEB-INF/db/ammdb con il caricatore di classi sun.misc.Launcher$AppClassLoader@6f94fa3e 
+Mon Jul 17 15:58:32 CEST 2017 Thread[DRDAConnThread_4,5,main] (DATABASE = ammdb), (DRDAID = {4}), Chiusura del database 'ammdb'.
+----------------------------------------------------------------
+Mon Jul 17 15:58:38 CEST 2017:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): istanza 789c8155-015d-50a5-560e-0000476baa4c
+sulla directory di database /home/moku/NetBeansProjects/ProjectAMM/ProgettoAmm/web/WEB-INF/db/ammdb con caricatore classi sun.misc.Launcher$AppClassLoader@6f94fa3e 
+Caricato da file:/usr/lib/jvm/java-8-oracle/db/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_121-b13
+user.dir=/usr/lib/jvm/java-8-oracle/db
+os.name=Linux
+os.arch=amd64
+os.version=4.4.0-79-generic
+derby.system.home=/home/moku/NetBeansProjects/ProjectAMM/ProgettoAmm/web/WEB-INF/db
+Programma di caricamento classe database avviato - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Jul 17 16:32:27 CEST 2017: arresto in corso del motore di Derby

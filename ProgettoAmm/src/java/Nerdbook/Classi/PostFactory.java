@@ -31,7 +31,7 @@ public class PostFactory {
 
         //Creazione Post
         Post post1 = new Post();
-        post1.setContent("CHe fame!");
+        post1.setContent("Che fame!");
         post1.setAutore(utenteFactory.getUtenteById(0));
         post1.setId(0);
         post1.setUser(utenteFactory.getUtenteById(0));
